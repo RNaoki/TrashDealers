@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <link href="assets/css/points-style.css" rel="stylesheet">
+</head>
+
+<body onload='trash.load_points();'>
+    <main>
+      <div class="split left">
+        <div>
+          <h3 class="labeled">TRASH DEALERS</h3>
+        </div>
+        <div>
+          <button onclick="trash.exchange_page()" class="points-button">Exchange points</button>
+          <button onclick="trash.recycle_page()" class="points-button">Recycle</button>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+            <h1 style='color: white;'>USER POINTS</h1>
+            <h1 id="points" style='font-size:60px; color: white;'></h1>
+        </div>
+      </div>
+    </main>
+</body>
+<script type="text/javascript" src="assets/js/scripts.js">
+</script>
+
+</html>
