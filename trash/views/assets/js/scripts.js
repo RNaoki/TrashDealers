@@ -39,23 +39,31 @@ var trash = {
     },
 
     exchange_page: function(){
-        window.location.href = initial_url + '/exchange.html';
+        window.location.href = initial_url + 'exchange.html';
     },
 
     points_page: function(){
-        window.location.href = initial_url + '/points.html';
+        window.location.href = initial_url + 'points.html';
     },
 
     recycle_page: function(){
-        window.location.href = initial_url + '/recycle.html';
+        window.location.href = initial_url + 'recycle.html';
     },
 
     work_page: function(){
-        window.location.href = initial_url + '/work.html';
+        window.location.href = initial_url + 'work.html';
+    },
+    
+    food_page: function(){
+        window.location.href = initial_url + 'food.html';
+    },
+
+    sales_page: function(){
+        window.location.href = initial_url + 'sales.html';
     },
 
     create_page: function(){
-        window.location.href = initial_url + '/create.html';
+        window.location.href = initial_url + 'create.html';
     },
 
     create_account: function(){
