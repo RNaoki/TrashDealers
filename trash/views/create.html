@@ -1,8 +1,12 @@
-<html>
+ <html>
 
 <head>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/1598/1598167.svg">
+    <title>Register</title>
+
+
 </head>
 
 <body>
@@ -17,23 +21,28 @@
       
       <div class="split right">
         <div class="centered">
-          <h1 style='color: #546E7A;'>CREATE ACCOUNT</h1>
-          <h4 style='color: #546E7A;'>Welcome</h4>
-          <form>
-            <input type="text" id="name" name="firstname" placeholder="Your name" value="">
-            <input type="text" id="lastName" name="lastname" placeholder="Your last name" value="">
-            <input type="text" id="email" name="email" placeholder="Your email" value="">
-            <input type="text" id="nick" name="nick" placeholder="Your nick" value="">
-            <input type="password" id="pw" name="lastname" placeholder="Your password" value="">
+          <h1 style='color: #546E7A; text-transform: uppercase;'>Create an Account</h1>
+          <!-- <h4 style='color: #546E7A;'>Welcome</h4> -->
+          <form  id="formulario" method="post">
+            <input type="text" id="name" name="firstname" placeholder="First name" value="" required>
+            <input type="text" id="lastName" name="lastname" placeholder="Last name" value="" required>
+            <input type="text" id="email" name="email" placeholder="Email Address" value="" required>
+            <input type="text" id="nick" name="nick" placeholder="Nickname" value="" required>
+            <input type="password" id="p  w" name="password" placeholder="Password" value="" required>
+            <input type="password" id="r_pw" name="repeat_password" placeholder="Repeat Password" value="" required>
           </form>
           <button onclick="trash.create_account()">SUBMIT</button>
-          <button style="margin-top: 10px;"onclick="trash.back_page()">BACK</button>
+          <li class="outroslink">
+            <a href="recover.html">Forgot Password?</a>
+          </li>
+          <li class="outroslink">
+            <a href="index.html">Already have an account? Login!</a>
+          </li>
         </div>
       </div>
     </main>
 </body>
 
-<script type="text/javascript" src="assets/js/scripts.js">
-</script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
 
 </html>
