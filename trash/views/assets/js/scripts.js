@@ -173,3 +173,7 @@ var trash = {
 
 
 }
+
+function test(){
+    alert("Msg de teste");
+}
