@@ -2,7 +2,7 @@
 
 <head>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-    <link href="assets/css/work-style.css" rel="stylesheet">
+    <link href="assets/css/chart-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,20 +21,15 @@
       </div>
       
       <div class="split right">
-        <div>
-          <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" class="points-button">Arroz de forno 1000</button>
-        </div>
-        <div>
-          <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(50)" class="points-button">Chocolate quente 50</button>
-        </div>
-        <div>
-          <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(500)" class="points-button">Cerveja 500</button>
-        </div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div style="margin-left: 15%; height: 90%; width: 70%;" id="chart_div"></div>
       </div>
     </main>
 </body>
 
 <script type="text/javascript" src="assets/js/scripts.js">
+</script>
+<script type="text/javascript" src="assets/js/chart.js">
 </script>
 
 </html>

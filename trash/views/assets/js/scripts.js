@@ -29,7 +29,7 @@ var trash = {
                         localStorage.setItem('points', data[0].pontos)
                     }
                 }
-            window.location.href = initial_url + '/points.html';
+            window.location.href = initial_url + 'points.html';
             }
         })
     },
@@ -68,6 +68,10 @@ var trash = {
 
     back_page: function(){
         window.location.href = initial_url;
+    },
+
+    chart_page: function(){
+        window.location.href = initial_url + 'chart.html';
     },
 
     create_account: function(){
@@ -183,9 +187,4 @@ var trash = {
         trash.adiciona = document.getElementById('quantia').value * value
     }
 
-
-}
-
-function test(){
-    alert("Msg de teste");
 }
