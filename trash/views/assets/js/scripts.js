@@ -66,6 +66,10 @@ var trash = {
         window.location.href = initial_url + 'create.html';
     },
 
+    back_page: function(){
+        window.location.href = initial_url;
+    },
+
     create_account: function(){
 
         var name =  document.getElementById('name').value
