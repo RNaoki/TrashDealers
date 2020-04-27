@@ -7,20 +7,21 @@
 
 <body>
     <main>
-      <div class="split left">
+      <div id="menu" class="split left">
         <div>
-            <h3 class="labeled">TRASH DEALERS</h3>
-          </div>
-          <div>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
-          </div>
-          <div>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.exchange_page()" class="points-button">Exchange</button>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.back_page()" class="points-button">LOGOUT</button>
-          </div>
+          <h3 class="labeled">TRASH DEALERS</h3>
+        </div>
+        <div>
+          <button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
+        </div>
+        <div>
+          <button style="color: rgb(56, 55, 55);" onclick="trash.exchange_page()" class="points-button">Exchange</button>
+          <button style="color: rgb(56, 55, 55);" onclick="trash.back_page()" class="points-button">LOGOUT</button>
+        </div>
       </div>
       
-      <div class="split right">
+      <div id="body" class="split right">
+        <button onclick="trash.open_sidebar()">OPEN</button>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div style="margin-left: 15%; height: 90%; width: 70%;" id="chart_div"></div>
       </div>

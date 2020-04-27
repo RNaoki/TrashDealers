@@ -20,14 +20,15 @@ body {
   /* Control the left side */
   .left {
     left: 0;
-    width: 15%;
+    display: none;
+    width: 0%;
     background-color: #EEEEEE;
   }
   
   /* Control the right side */
   .right {
     right: 0;
-    width: 85%;
+    width: 100%;
     background-color: rgb(132, 178, 90);
   }
   
@@ -62,15 +63,15 @@ body {
     border: none;
     float: left;
     color: white;
-    margin: 20px;
-    padding: 10px;
+    left: 0;
+    margin-top:25%;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    border-radius: 8px;
+    font-size: 1px;
+    border-radius: 0px 10px 10px 0px;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
+    height: 30px;
+    width: 20px;
   }
 
   .centered button:hover{

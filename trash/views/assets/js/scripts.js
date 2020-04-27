@@ -130,6 +130,19 @@ var trash = {
         
     },
 
+    open_sidebar: function(){
+        if(document.getElementById("menu").style.display == "none" || document.getElementById("menu").style.display == ""){
+            document.getElementById("menu").style.width = "15%";
+            document.getElementById("menu").style.display = "block";
+            document.getElementById("body").style.width = "85%";
+        }else{
+            document.getElementById("menu").style.width = "0%";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("body").style.width = "100%";
+        }
+        
+    },
+
     pay_point: function(value){
         var url = 'http://25.117.120.200:5000/usuarios/usuario/' + localStorage.getItem('user') + '/updatePontos/-&' + value
         var url2 = 'http://25.117.120.200:5000/usuarios/usuario/id&' + localStorage.getItem('user')
