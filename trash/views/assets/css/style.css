@@ -30,6 +30,7 @@ body {
   
   /* Control the right side */
   .right {
+    display: flex;
     right: 0;
     width: 65%;
     background-color: #EEEEEE;
