@@ -1,6 +1,6 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawTrendlines);
-var server = "http://ec2-34-238-191-59.compute-1.amazonaws.com:5000/"
+var server = "http://ec2-100-25-156-187.compute-1.amazonaws.com:5000/"
 var url = server + '/historicoResgatesPremio/resgate/idUsuario&' + localStorage.getItem('user')
 var url2 = server + '/coletas/coleta/idUsuario&' + localStorage.getItem('user')
 var url3 = server + '/reciclaveis/todos'

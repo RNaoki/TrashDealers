@@ -1,11 +1,12 @@
 var initial_url = "http://localhost:3000/";
-var server = "http://ec2-34-238-191-59.compute-1.amazonaws.com:5000/"
+var server = "http://ec2-100-25-156-187.compute-1.amazonaws.com:5000/"
 var trash = {
     adiciona: 0,
     change_page: function(){
         email = document.getElementById('email').value
         pw = document.getElementById('pw').value
-        var url = server + '/usuarios/email&' + email
+        var url = server + 'usuarios/usuario/' + email
+        var url2 = server + 'usuarios/usuario/email&' + email
         $.ajax({
             url: url,
             type: 'GET',
@@ -20,18 +21,49 @@ var trash = {
               xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
             },
             success: function(data) {
-                localStorage.setItem('user', data[0].idUsuario)
-                if(pw == data[0].senha){
-                    
-                    if(data == []){
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    cors: true ,
+                    contentType:'application/json',
+                    secure: true,
+                    headers: {
+                      'Access-Control-Allow-Origin': '*',
+                    },
+                    beforeSend: function (xhr) {
+                      xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+                    },
+                    success: function(data) {
+                        if(pw == data[0].senha){
+                            $.ajax({
+                                url: url2,
+                                type: 'GET',
+                                dataType: 'json',
+                                cors: true ,
+                                contentType:'application/json',
+                                secure: true,
+                                headers: {
+                                'Access-Control-Allow-Origin': '*',
+                                },
+                                beforeSend: function (xhr) {
+                                xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+                                },
+                                success: function(values) {
+                                    localStorage.setItem('user', values[0].idUsuario)
+                                    if(values == []){
+                                    }
+                                    else{
+                                        localStorage.setItem('points', values[0].pontos)
+                                    }
+                                    window.location.href = initial_url + 'points.html';
+                                }
+                            });
+                        }
                     }
-                    else{
-                        localStorage.setItem('points', data[0].pontos)
-                    }
-                }
-            window.location.href = initial_url + 'points.html';
+                });
             }
-        })
+        });
     },
     
     load_points: function(){
