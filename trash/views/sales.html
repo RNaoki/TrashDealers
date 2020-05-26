@@ -3,6 +3,8 @@
 <head>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <link href="assets/css/work-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -11,19 +13,84 @@
         <div>
             <h3 class="labeled">TRASH DEALERS</h3>
           </div>
-          <div>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
+          <div><button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
           </div>
           <div>
             <button style="color: rgb(56, 55, 55);" onclick="trash.exchange_page()" class="points-button">Exchange</button>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.back_page()" class="points-button">LOGOUT</button>
           </div>
       </div>
-      
+      <div class="split infos">
+        <H1 class="title">STORE</H1>
+          <p class="subtitle">Here you can change your points to real prices!</p>
+      </div>
       <div class="split right">
         <div>
-          <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" class="points-button">FAKE desconto de 5% na centauro 1000 </button>
+          <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)"  onmouseover="trash.show(change1, changeReverse1)" onmouseout="trash.hide(change1,changeReverse1)" class="points-button2">
+              <img class="logos" id="changeReverse1" src="assets/img/logo-adidas.png">
+              <div class="infoProduct" id="change1">
+                  <p style="padding: 30px; color: #424242; font-weight: bold;">Para trocar por 50$ off na Adidas clique aqui!</p>
+              </div>
+          </button>
         </div>
+          <div>
+              <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" onmouseover="trash.show(change2, changeReverse2)" onmouseout="trash.hide(change2,changeReverse2)" class="points-button2">
+                  <img  class="logos" id="changeReverse2" src="assets/img/logo-centauro.png">
+                  <div class="infoProduct" id="change2">
+                      <p style="padding: 30px; color: #424242; font-weight: bold;">Para trocar por 20% off na Centauro clique aqui!</p>
+                  </div>
+              </button>
+          </div>
+          <div>
+              <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" onmouseover="trash.show(change3, changeReverse3)" onmouseout="trash.hide(change3,changeReverse3)" class="points-button2">
+                  <img class="logos" id="changeReverse3" src="assets/img/logo-extra.png">
+                  <div class="infoProduct" id="change3">
+                      <p style="padding: 30px; color: #424242; font-weight: bold;">Para trocar por 35$ off no Extra clique aqui!</p>
+                  </div>
+              </button>
+          </div>
+          <div>
+              <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" onmouseover="trash.show(change4, changeReverse4)" onmouseout="trash.hide(change4,changeReverse4)" class="points-button2">
+                  <img class="logos" id="changeReverse4" src="assets/img/logo-ifood.png">
+                  <div class="infoProduct" id="change4">
+                      <p style="padding: 30px; color: #424242; font-weight: bold;">Para trocar por 25% em 4 pedidos no Ifood clique aqui!</p>
+                  </div>
+              </button>
+          </div>
+          <div>
+              <button style="color: rgb(56, 55, 55);" onclick="trash.pay_point(1000)" id="myBtn" onmouseover="trash.show(change5, changeReverse5)" onmouseout="trash.hide(change5,changeReverse5)" class="points-button2">
+                  <img class="logos" id="changeReverse5" src="assets/img/logo-nike.png">
+                  <div class="infoProduct" id="change5">
+                      <p style="padding: 30px; color: #424242; font-weight: bold;">Para trocar por 85$ off na Nike clique aqui!</p>
+                  </div>
+              </button>
+          </div>
+          <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <img class="logos_promo"  src="assets/img/logo-nike.png">
+                  <p style="color: #212121; margin-top: -2px;">Condições da oferta:</p>
+                  <p class="oferta">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                      unknown printer took a galley of type and scrambled it to make a type specimen book.
+                      It has survived not only five centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                      sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                      Aldus PageMaker including versions of Lorem Ipsum.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                      unknown printer took a galley of type and scrambled it to make a type specimen book.
+                      It has survived not only five centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                      sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                      Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <button class="accept_offer_btn"> Aceitar a oferta </button>
+              </div>
+
+          </div>
+
+
       </div>
     </main>
 </body>
