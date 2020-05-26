@@ -21,14 +21,42 @@ body {
   .left {
     left: 0;
     width: 15%;
-    background-color: #EEEEEE;
+    background-color: #e0e0e0;
+    border-right: 1px solid #bdbdbd;
   }
   
   /* Control the right side */
   .right {
     right: 0;
+    margin-right:-1px;
     width: 85%;
     background-color: rgb(132, 178, 90);
+    margin-top:400px;
+
+  }
+  .infos{
+    right: 0;
+    width: 85%;
+    height: 400px;
+    margin-right:-1px;
+    background-color: #eeeeee;
+
+  }
+  .title{
+    text-align: center;
+    font-family: "Open sans";
+    font-weight: bolder;
+    font-size: 52px;
+    color: #424242;
+    margin-top:-10px;
+  }
+  .subtitle{
+    text-align: center;
+    font-family: "Open sans";
+    font-weight: bolder;
+    font-size: 18px;
+    color: #424242;
+    margin-top:-40px;
   }
   
   /* If you want the content centered horizontally and vertically */
@@ -46,8 +74,8 @@ body {
     padding: 0;
   }
 
-  .points-button{
-    background-color: #eee;
+  .points-button {
+    background-color: #e0e0e0;
     color: #eee;
     cursor: pointer;
     padding: 18px;
@@ -56,7 +84,20 @@ body {
     text-align: left;
     outline: none;
     font-size: 15px;
+    font-family: "Open sans";
   }
+.points-button2 {
+  background-color: #eeeeee;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: "Open sans";
+}
 
   .right button{
     border: none;
@@ -71,6 +112,13 @@ body {
     cursor: pointer;
     height: 200px;
     width: 200px;
+    transition:0.50s;
+    z-index:-1;
+
+  }
+
+  .right button:hover{
+
   }
 
   .centered button:hover{
@@ -80,6 +128,8 @@ body {
   .labeled {
     margin-top: 0;
     text-align: center;
+    font-family: "Open sans";
+    font-weight: bolder;
   }
 
   .points-button:hover{
@@ -124,3 +174,110 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
+.infoProduct{
+  opacity: 0;
+  border: none;
+  float: left;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  height: 0px;
+  border-radius: 8px;
+  width: 200px;
+  background-color:#e0e0e0;
+  margin: -10px;
+  margin-top:-190px;
+  transition-timing-function: ease-out;
+  transition: 0.4s;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden;/* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  height:60%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.logos_promo{
+  height: 30%;
+  widht:30%;
+  position:relative;
+  left:50%;
+  margin-left:-15%;
+}
+.oferta{
+  padding-left: 5px;
+  padding-right:5px;
+  widht:80%;
+  height:40%;
+  overflow: auto;
+  text-align: justify;
+  border: #bdbdbd 2px solid;
+  backgroud-color:#bdbdbd;
+  color:#212121;
+}
+.modal-content button{
+  width:70%;
+  height:10%;
+  margin-left:15%;
+  color:#575757;
+  font-weight: bold;
+  border: #bdbdbd 2px solid;
+  backgroud-color: #bdbdbd;
+}
+.modal-content button:hover{
+  background-color:#e0e0e0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
