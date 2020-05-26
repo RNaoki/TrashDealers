@@ -1,11 +1,12 @@
 var initial_url = "http://localhost:3000/";
-
+var server = "http://ec2-100-25-156-187.compute-1.amazonaws.com:5000/"
 var trash = {
     adiciona: 0,
     change_page: function(){
         email = document.getElementById('email').value
         pw = document.getElementById('pw').value
-        var url = 'http://25.117.120.200:5000/usuarios/usuario/email&' + email
+        var url = server + 'usuarios/usuario/' + email
+        var url2 = server + 'usuarios/usuario/email&' + email
         $.ajax({
             url: url,
             type: 'GET',
@@ -20,18 +21,49 @@ var trash = {
               xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
             },
             success: function(data) {
-                localStorage.setItem('user', data[0].idUsuario)
-                if(pw == data[0].senha){
-                    
-                    if(data == []){
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    cors: true ,
+                    contentType:'application/json',
+                    secure: true,
+                    headers: {
+                      'Access-Control-Allow-Origin': '*',
+                    },
+                    beforeSend: function (xhr) {
+                      xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+                    },
+                    success: function(data) {
+                        if(pw == data[0].senha){
+                            $.ajax({
+                                url: url2,
+                                type: 'GET',
+                                dataType: 'json',
+                                cors: true ,
+                                contentType:'application/json',
+                                secure: true,
+                                headers: {
+                                'Access-Control-Allow-Origin': '*',
+                                },
+                                beforeSend: function (xhr) {
+                                xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+                                },
+                                success: function(values) {
+                                    localStorage.setItem('user', values[0].idUsuario)
+                                    if(values == []){
+                                    }
+                                    else{
+                                        localStorage.setItem('points', values[0].pontos)
+                                    }
+                                    window.location.href = initial_url + 'points.html';
+                                }
+                            });
+                        }
                     }
-                    else{
-                        localStorage.setItem('points', data[0].pontos)
-                    }
-                }
-            window.location.href = initial_url + 'points.html';
+                });
             }
-        })
+        });
     },
     
     load_points: function(){
@@ -82,7 +114,7 @@ var trash = {
         var nick =  document.getElementById('nick').value
         var pw =  document.getElementById('pw').value
 
-        var url = 'http://25.117.120.200:5000/usuarios/create/' + name + '&'+ lastName + '&' + email + '&' + nick + '&' + pw
+        var url = server + 'usuarios/create/' + name + '&'+ lastName + '&' + email + '&' + nick + '&' + pw
 
         $.ajax({
             url: url,
@@ -99,9 +131,9 @@ var trash = {
         var e = document.getElementById("category");
         var value = e.options[e.selectedIndex].id;
         var quantia =  document.getElementById('quantia').value
-        var url = 'http://25.117.120.200:5000/usuarios/usuario/' + localStorage.getItem('user') + '/updatePontos/+&' + trash.adiciona
-        var url2 = 'http://25.117.120.200:5000/coletas/create/' + quantia + '&' + value + '&' + localStorage.getItem('user') + '&1'
-        var url3 = 'http://25.117.120.200:5000/usuarios/usuario/id&' + localStorage.getItem('user')
+        var url = server + 'usuarios/usuario/' + localStorage.getItem('user') + '/updatePontos/+&' + trash.adiciona
+        var url2 = server + 'coletas/create/' + quantia + '&' + value + '&' + localStorage.getItem('user') + '&1'
+        var url3 = server + 'usuarios/usuario/id&' + localStorage.getItem('user')
 
         $.ajax({
             url: url,
@@ -119,7 +151,7 @@ var trash = {
                             type: 'GET',
                             success: function(data) {
                                 localStorage.setItem('points', data[0].pontos)
-                                window.location.href = initial_url + '/points.html'; 
+                                window.location.href = initial_url + 'points.html'; 
                             }
                         });
                     }
@@ -144,8 +176,9 @@ var trash = {
     },
 
     pay_point: function(value){
-        var url = 'http://25.117.120.200:5000/usuarios/usuario/' + localStorage.getItem('user') + '/updatePontos/-&' + value
-        var url2 = 'http://25.117.120.200:5000/usuarios/usuario/id&' + localStorage.getItem('user')
+        var url = server + 'usuarios/usuario/' + localStorage.getItem('user') + '/updatePontos/-&' + value
+        var url2 = server + '/historicoResgatesPremio/create/' + value + '&1' + '&' + localStorage.getItem('user')
+        var url3 = server + 'usuarios/usuario/id&' + localStorage.getItem('user')
 
         $.ajax({
             url: url,
@@ -153,12 +186,24 @@ var trash = {
             type: 'POST',
             success: function(data) {
                 $.ajax({
-                    url: url2,
+                    url: url3,
                     crossDomain: true,
                     type: 'GET',
                     success: function(data) {
                         localStorage.setItem('points', data[0].pontos)
-                        window.location.href = initial_url + '/points.html'; 
+                        $.ajax({
+                            url: url2,
+                            crossDomain: true,
+                            type: 'POST',
+                            success: function(data) {
+                                $.ajax({
+                                    url: url2,
+                                    crossDomain: true,
+                                    type: 'POST'
+                                });
+                                window.location.href = initial_url + '/points.html'; 
+                            }
+                        })
                     }
                 });
             }
@@ -168,7 +213,7 @@ var trash = {
     },
 
     read: function() {
-        var url = 'http://25.117.120.200:5000/reciclaveis/reciclavel/todos';
+        var url = server + '/reciclaveis/todos';
         var html="";
         $.ajax(
             {

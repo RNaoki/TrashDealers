@@ -6,30 +6,29 @@
 </head>
 
 <body onload='trash.read();'>
-    <main>
-      <div class="split left">
-        <div>
-            <h3 class="labeled">TRASH DEALERS</h3>
-          </div>
-          <div>
-            <button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
-            <button onclick="trash.back_page()" class="points-button">LOGOUT</button>
-          </div>
-      </div>
-      
-      <div class="split right">
-        <div class="centered">
-          <h1 style='color: #eee;'>REGISTER YOUR ACTION</h1>
-          <form>
-            <input type="text" id="quantia" name="quantia" placeholder="Peso em gramas (g)" value="">
-            <div id="content">
-
-            </div>
-          </form>
-          <button onclick="trash.create_point()">SUBMIT</button>
+  <main>
+    <div class="split left">
+      <div>
+          <h3 class="labeled">TRASH DEALERS</h3>
         </div>
+        <div>
+          <button style="color: rgb(56, 55, 55);" onclick="trash.points_page()" class="points-button">HOME</button>
+        </div>
+    </div>
+
+    <div class="split right">
+      <div class="centered">
+        <h1 style='color: #eee;'>REGISTER YOUR ACTION</h1>
+        <form>
+          <input type="text" id="quantia" name="quantia" placeholder="Peso em gramas (g)" value="">
+          <div id="content">
+
+          </div>
+        </form>
+        <button onclick="trash.create_point()">SUBMIT</button>
       </div>
-    </main>
+    </div>
+  </main>
 </body>
 
 <script type="text/javascript" src="assets/js/scripts.js">
