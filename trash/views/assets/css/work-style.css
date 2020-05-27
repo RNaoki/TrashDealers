@@ -231,33 +231,37 @@ input[type=submit] {
 }
 .logos_promo{
   height: 30%;
-  widht:30%;
+  width:30%;
   position:relative;
   left:50%;
   margin-left:-15%;
 }
 .oferta{
+  position:relative;
+  left:50%;
+  margin-left:-40%;
   padding-left: 5px;
   padding-right:5px;
-  widht:80%;
+  width:80%;
   height:40%;
   overflow: auto;
   text-align: justify;
   border: #bdbdbd 2px solid;
-  backgroud-color:#bdbdbd;
+  background-color:#eeeeee;
   color:#212121;
+
 }
 .modal-content button{
   width:70%;
   height:10%;
   margin-left:15%;
-  color:#575757;
   font-weight: bold;
   border: #bdbdbd 2px solid;
-  backgroud-color: #bdbdbd;
+  background-color:#e0e0e0;
+  color:#575757;
 }
 .modal-content button:hover{
-  background-color:#e0e0e0;
+  background-color:#eeeeee;
 }
 
 /* width */

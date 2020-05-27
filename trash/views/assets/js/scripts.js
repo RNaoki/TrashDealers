@@ -258,31 +258,133 @@ var trash = {
         appear.style.height = "0px";
 
 
+    },
+
+    populate_teste:function(id){
+        
+        if(id == "changeReverse1"){
+            var html = "";
+            html += "<img class='logos_promo'  src='assets/img/logo-adidas.png'>";
+            html += "<p style='color: #212121; margin-top: -2px;'>Condições da oferta:</p>";
+            html += "<p class='oferta'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.";
+            html += "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.</p>";
+            document.getElementById("teste").innerHTML = html;
+        }
+        if(id == "changeReverse2"){
+            var html = "";
+            html += "<img class='logos_promo'  src='assets/img/logo-centauro.png'>";
+            html += "<p style='color: #212121; margin-top: -2px;'>Condições da oferta:</p>";
+            html += "<p class='oferta'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.";
+            html += "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.</p>";
+            document.getElementById("teste").innerHTML = html;
+        }
+        if(id == "changeReverse3"){
+            var html = "";
+            html += "<img class='logos_promo'  src='assets/img/logo-extra.png'>";
+            html += "<p style='color: #212121; margin-top: -2px;'>Condições da oferta:</p>";
+            html += "<p class='oferta'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.";
+            html += "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.</p>";
+            document.getElementById("teste").innerHTML = html;
+        }
+        if(id == "changeReverse4"){
+            var html = "";
+            html += "<img class='logos_promo'  src='assets/img/logo-ifood.png'>";
+            html += "<p style='color: #212121; margin-top: -2px;'>Condições da oferta:</p>";
+            html += "<p class='oferta'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.";
+            html += "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.</p>";
+            document.getElementById("teste").innerHTML = html;
+        }
+        if(id == "changeReverse5"){
+            var html = "";
+            html += "<img class='logos_promo'  src='assets/img/logo-nike.png'>";
+            html += "<p style='color: #212121; margin-top: -2px;'>Condições da oferta:</p>";
+            html += "<p class='oferta'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.";
+            html += "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            html += "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an";
+            html += "unknown printer took a galley of type and scrambled it to make a type specimen book.";
+            html += "It has survived not only five centuries, but also the leap into electronic typesetting,";
+            html += "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset";
+            html += "sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like";
+            html += "Aldus PageMaker including versions of Lorem Ipsum.</p>";
+            document.getElementById("teste").innerHTML = html;
+        }
+    },
+
+    abrejanela:function(id) {
+        this.populate_teste(id);
+        document.getElementById("myModal").style.display = "block";
+        
     }
 
 }
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+
+
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    document.getElementById("myModal").style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == document.getElementById("myModal")) {
+        document.getElementById("myModal").style.display = "none";
     }
 }
     
