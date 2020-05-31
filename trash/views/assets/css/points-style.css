@@ -1,37 +1,75 @@
 body { 
     overflow-x:hidden; 
-    overflow-y:scroll 
+    overflow-y:hidden
     !important; 
     position: relative; 
     transition: all 0.3s linear; 
     top:0;
+    margin:0;
 }
 
 .split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
+  height: 100%;
+  position: relative;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition:0.70s;
+}
   
   /* Control the left side */
   .left {
     left: 0;
     width: 15%;
-    background-color: #EEEEEE;
+    background-color: #e0e0e0;
+    border-right: 1px solid #616161;
+    position:fixed;
+    z-index:1;
+    
+    
   }
   
   /* Control the right side */
   .right {
-    right: 0;
+    margin-left:15%;
     width: 85%;
     background-image: url("../img/91352.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  .abre_fecha{
+    border: none;
+    left:15%;
+    top:50%;
+    background-color: #e0e0e0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1px;
+    border-radius: 0px 10px 10px 0px;
+    border-right: 1px solid #616161;
+    border-bottom: 1px solid #616161;
+    border-top: 1px solid #616161;
+    cursor: pointer;
+    height: 50px;
+    width: 20px;
+    position:fixed;
+    z-index: 1;
+    text-decoration: none;
+    outline: 0;
+  }
+  .lines {
+    border-left: 1px solid #9e9e9e;
+    height: 28px;
+    float: left;
+    margin-left: 5px;
+  }
+  .labeled {
+    margin-top: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-family:"Open sans";
+
   }
   
   /* If you want the content centered horizontally and vertically */
@@ -49,21 +87,16 @@ body {
     padding: 0;
   }
 
-  .points-button{
-    background-color: #eee;
-    color: #444;
+  .points-button {
+    background-color: #e0e0e0;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
-
-  .labeled {
-    margin-top: 0;
-    text-align: center;
+    font-family: "Open sans";
+    border:none;
   }
 
   .points-button:hover{
