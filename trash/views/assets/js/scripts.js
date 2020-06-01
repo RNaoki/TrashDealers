@@ -36,7 +36,7 @@ var trash = {
                       xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
                     },
                     success: function(data) {
-                        if(pw == data[0].senha){
+                        if(btoa(pw) == data[0].senha){
                             $.ajax({
                                 url: url2,
                                 type: 'GET',
@@ -103,7 +103,7 @@ var trash = {
         var nick =  document.getElementById('nick').value
         var pw =  document.getElementById('pw').value
 
-        var url = server + 'usuarios/create/' + name + '&'+ lastName + '&' + email + '&' + nick + '&' + pw
+        var url = server + 'usuarios/create/' + name + '&'+ lastName + '&' + email + '&' + nick + '&' + btoa(pw)
 
         $.ajax({
             url: url,
