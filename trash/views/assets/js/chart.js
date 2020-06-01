@@ -1,6 +1,6 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawTrendlines);
-var server = "http://ec2-100-25-156-187.compute-1.amazonaws.com:5000/"
+var server = "http://ec2-100-25-156-187.compute-1.amazonaws.com:5000"
 var url = server + '/historicoResgatesPremio/resgate/idUsuario&' + localStorage.getItem('user')
 var url2 = server + '/coletas/coleta/idUsuario&' + localStorage.getItem('user')
 var url3 = server + '/reciclaveis/todos'
@@ -26,15 +26,14 @@ function drawTrendlines() {
               crossDomain: true,
               type: 'GET',
               success: function(values2) {
-                console.log(reciclaveis)
                 for(item in values){
                   points.push([new Date(values[item].dataAcao), -values[item].pontos])
                 }
                 for(item in values2){
                   points.push([new Date(values2[item].dataColeta), values2[item].quantia * reciclaveis[values2[item].idReciclavel-1].valor])
                 }
-                console.log(points)
-                data.addRows(points);
+                const sortedActivities = points.slice().sort((a, b) => a[0] - b[0])
+                data.addRows(sortedActivities);
       
                 var options = {
                   hAxis: {
